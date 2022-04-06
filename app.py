@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/tts', methods=['POST'])
 def tts():
     text = request.form['text']
-    tts = gTTS(text=text, lang='es')
+    tts = gTTS(text=text, lang='en')
     mp3_fp = BytesIO()
     tts.write_to_fp(mp3_fp)
     mp3_fp.seek(0)
